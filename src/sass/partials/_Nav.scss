@@ -1,0 +1,113 @@
+.nav {
+    position: relative;
+    background: var(--red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 11px 31px;
+
+    &-hamburger {
+        position: absolute;
+        right: 15px;
+        top: 18px;
+        padding: 0.25rem 0.45rem;
+        background: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 25px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &-item-wrap { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-item {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        color: var(--white);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 0 15px;
+        margin: 0 5px;
+        transition: 0.3s ease color;
+
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+
+    &-item.active {
+        color: var(--yellow);
+    }
+
+    .dropdown.show {
+        color: var(--yellow);
+
+        .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-bg {
+            display: unset;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+        &-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+        }
+
+        &-menu {
+            display: none;
+            min-width: 10rem;
+            transform: translate(-70px, 10px);
+            position: absolute;
+            flex-direction: column;
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                display: block;
+                border-right: none;
+                border-bottom: none;
+                transform: translateX(-50%) rotateZ(45deg);
+                position: absolute;
+                top: -6px;
+                left: 50%;
+                z-index: -1;
+            }
+        }
+
+        &-item {
+            color: var(--dark);
+            padding: 0.6rem 1rem;
+            transition: .3s ease color, .3s ease background;
+
+            &:hover {
+                color: var(--yellow);
+                background: #f7f7f7;
+            }
+        }
+    }
+}

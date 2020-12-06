@@ -1,0 +1,26 @@
+.scrollup {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 86px;
+    right: 0;
+    font-size: 12px;
+    background: var(--red);
+    border-radius: 50%;
+    color: #fff;
+    line-height: 45px;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 0.5s ease-out opacity;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.scrollup.active {
+    display: flex;
+}

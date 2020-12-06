@@ -1,0 +1,71 @@
+.subscribe {
+    background: url(../../assets/img/email-bg.jpg) center center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(8, 67, 76, 0.74);
+    }
+
+    &-info {
+        position: relative;
+        padding: 46px 0 47px 0;
+        max-width: 600px;
+        margin-left: auto;
+    }
+
+    &-descr {
+        font-size: 15px;
+        line-height: 26px;
+        color: var(--white);
+        margin-bottom: 24px;
+    }
+
+    &-text {
+        font-size: 15px;
+        line-height: 26px;
+        opacity: 0.8;
+        margin: 15px 0;
+        color: var(--white);
+    }
+
+    &-form {
+        display: flex;
+        flex-wrap: wrap;
+
+        input {
+            width: 70%;
+            border-radius: 6px 0 0 6px;
+        }
+
+        input,
+        button {
+            font-size: 16px;
+            background: #fff;
+            padding: 0px 15px;
+            color: var(--lightBlack);
+            height: 50px;
+            border: none;
+        }
+
+        button {
+            font-weight: 600;
+            border-radius: 0 6px 6px 0;
+            width: 30%;
+            cursor: pointer;
+            color: var(--white);
+            background: var(--red);
+            transition: background 0.15s ease-in-out;
+
+            &:hover {
+                background: var(--blue);
+            }
+        }
+    }
+}

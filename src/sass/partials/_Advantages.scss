@@ -1,0 +1,57 @@
+.advantages {
+    background: var(--white);
+
+    &-wrap {
+        margin: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-gap: 22px;
+    }
+
+    &-item {
+        width: calc(100% / 4 - 22px);
+
+        &:hover {
+            .advantages-item-rounded {
+                background: lighten($blueColor, 67%);
+                color: var(--blue);
+            }
+        }
+
+        &-rounded {
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background: lighten($redColor, 45%);
+            color: var(--red);
+            font-size: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease color, .3s ease background;
+        }
+
+        &-title {
+            margin-top: 22px;
+
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--black);
+                transition: .3s ease color;
+
+                &:hover {
+                    color: var(--red);
+                }
+            }
+        }
+
+        &-text {
+            margin-top: 10px;
+            color: var(--lightBlack);
+            line-height: 26px;
+            font-weight: 400;
+        }
+    }
+}

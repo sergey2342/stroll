@@ -1,0 +1,47 @@
+.slider {
+    position: relative;
+    user-select: none;
+    touch-action: manipulation;
+    backface-visibility: hidden;
+}
+
+.slider-list {
+    overflow: hidden;
+}
+
+.slider-track {
+    transform: translate3d(0, 0, 0);
+    display: flex;
+}
+
+.slide {
+    transition: .3s width;
+    display: inline-block;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.slider-dots {
+    display: flex;
+    align-items: center;
+}
+
+.slider-dot {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    border: 1px solid #141414;
+    background: #fff;
+    border-radius: 50%;
+    outline: none;
+    transition: .3s background;
+}
+
+.slider-dot:hover {
+    background: #eee;
+}
+
+.slider-dot.active {
+    background: #141414;
+}

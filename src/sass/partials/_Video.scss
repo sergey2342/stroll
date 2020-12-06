@@ -1,0 +1,109 @@
+.video {
+    &-preview {
+        margin-top: 46px;
+        background: url('../../assets/img/video-img.jpg') center center/cover no-repeat;
+        min-height: 32em;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            background: rgba(8, 67, 76, 0.34);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &-play-button {
+        top: calc(50% - 8px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        border-radius: 50%;
+        background: var(--white);
+        width: 65px;
+        height: 65px;
+        color: var(--blue);
+        transition: 0.3s ease-in-out transform;
+        animation: ripple 1s linear infinite;
+
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+
+    &-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background: #232020;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-player {
+            padding: 60px 20px;
+            width: 100%;
+            max-width: 650px;
+            position: relative;
+
+            &-close {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 44px;
+                height: 44px;
+                border-radius: 6px;
+                font-size: 22px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #000;
+                color: var(--white);
+                cursor: pointer;
+            }
+
+            iframe {
+                width: 100%;
+                min-height: 500px;
+            }
+        }
+
+        &-player.showing {
+            animation: .2s showPopup ease-in-out forwards;
+        }
+
+        &-player.hiding {
+            animation: .2s hidePopup ease-in-out forwards;
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 30px;
+        margin: 50px 0 0 0;
+
+        &-col {
+            width: 50%;
+        }
+
+        &-col:last-child {
+            line-height: 26px;
+            font-weight: 400;
+            color: var(--lightBlack);
+        }
+    }
+}

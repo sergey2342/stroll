@@ -1,0 +1,55 @@
+.order {
+    &-form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-row-gap: 18px;
+
+        &-item {
+            label {
+                display: block;
+                font-weight: 600;
+                color: var(--dark);
+                margin-bottom: 8px;
+            }
+
+            input,
+            select,
+            button {
+                -webkit-appearance: button;
+                width: 100%;
+                font-size: 15px;
+                line-height: 25px;
+                padding: 12px 15px 12px 12px;
+                color: var(--lightBlack);
+                border-radius: 6px;
+                border: 1px solid transparent;
+                background: var(--gray);
+                height: 50px;
+            }
+
+            select {
+                background: #F2F2F2 url(../../assets/img/down.png) no-repeat 95% 52%;
+                -webkit-appearance: none;
+            }
+
+            input[type=date] {
+                background: #F2F2F2 url(../../assets/img/date.png) 95% 50% no-repeat;
+                -webkit-appearance: none;
+            }
+
+            button {
+                font-size: 16px;
+                cursor: pointer;
+                color: var(--white);
+                background: var(--blue);
+                font-weight: 700;
+                transition: background 0.15s ease-in-out;
+
+                &:hover {
+                    background: var(--red);
+                }
+            }
+        }
+    }
+}

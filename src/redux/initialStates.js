@@ -1,0 +1,1 @@
+export const mainInitialState = { value: 0 }
