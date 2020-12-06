@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/stroll/static/css/main.322a41df.chunk.css",
-    "main.js": "/stroll/static/js/main.17e0b914.chunk.js",
-    "main.js.map": "/stroll/static/js/main.17e0b914.chunk.js.map",
+    "main.css": "/stroll/static/css/main.0c468da3.chunk.css",
+    "main.js": "/stroll/static/js/main.89662478.chunk.js",
+    "main.js.map": "/stroll/static/js/main.89662478.chunk.js.map",
     "runtime-main.js": "/stroll/static/js/runtime-main.95bd37bc.js",
     "runtime-main.js.map": "/stroll/static/js/runtime-main.95bd37bc.js.map",
     "static/js/2.099adb66.chunk.js": "/stroll/static/js/2.099adb66.chunk.js",
     "static/js/2.099adb66.chunk.js.map": "/stroll/static/js/2.099adb66.chunk.js.map",
     "index.html": "/stroll/index.html",
-    "static/css/main.322a41df.chunk.css.map": "/stroll/static/css/main.322a41df.chunk.css.map",
+    "static/css/main.0c468da3.chunk.css.map": "/stroll/static/css/main.0c468da3.chunk.css.map",
     "static/js/2.099adb66.chunk.js.LICENSE.txt": "/stroll/static/js/2.099adb66.chunk.js.LICENSE.txt",
     "static/media/1.29478e31.jpg": "/stroll/static/media/1.29478e31.jpg",
     "static/media/2.8130f151.jpg": "/stroll/static/media/2.8130f151.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.95bd37bc.js",
     "static/js/2.099adb66.chunk.js",
-    "static/css/main.322a41df.chunk.css",
-    "static/js/main.17e0b914.chunk.js"
+    "static/css/main.0c468da3.chunk.css",
+    "static/js/main.89662478.chunk.js"
   ]
 }
