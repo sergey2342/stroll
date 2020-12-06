@@ -8,7 +8,18 @@ import OrderForm from './OrderForm'
 const Order = () => {
     const dispatch = useDispatch()
 
-    const submitForm = props => dispatch(reset('order-form'))
+    const submitForm = postData => { 
+        console.log('Отправка...') 
+        let t = setTimeout(() => { 
+            if(Math.random() > 0.5) { 
+                console.log('Отправлено', postData) 
+                dispatch(reset('order-form')) 
+            } else { 
+                console.log('Ошибка отправки') 
+            } 
+            clearTimeout(t) 
+        }, 1000) 
+    }
 
     return (
         <div className="section order">

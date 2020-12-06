@@ -18,7 +18,18 @@ SubscribeForm = reduxForm({ form: 'subscribe-form' })(SubscribeForm)
 const Subscribe = () => {
     const dispatch = useDispatch()
 
-    const submitForm = props => dispatch(reset('subscribe-form'))
+    const submitForm = postData => { 
+        console.log('Отправка...') 
+        let t = setTimeout(() => { 
+            if(Math.random() > 0.5) { 
+                console.log('Отправлено', postData) 
+                dispatch(reset('subscribe-form')) 
+            } else { 
+                console.log('Ошибка отправки') 
+            } 
+            clearTimeout(t) 
+        }, 1000) 
+    }
 
     return (
         <div className="section subscribe">
