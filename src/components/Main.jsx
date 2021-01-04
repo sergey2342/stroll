@@ -13,8 +13,9 @@ const slidersData = [
 const Main = () => {
 
     useEffect(() => {
-        let slider = new Slider('#main-slider')
-        slider.init()
+        new Slider('#main-slider', {
+            drag: true
+        })
       }, [])
 
     return (

@@ -21,10 +21,11 @@ const feedbacksData = [
 const Feedback = () => {
 
     useEffect(() => {
-        let slider = new Slider('#feedback-slider', 
+        new Slider('#feedback-slider', 
             { 
                 items: 3, 
                 gap: 20, 
+                drag: true,
                 responsive: [
                     {
                         breakpoint: 991,
@@ -40,7 +41,6 @@ const Feedback = () => {
                     }
                 ] 
             })
-        slider.init()
       }, [])
 
 
