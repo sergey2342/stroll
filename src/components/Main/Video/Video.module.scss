@@ -1,7 +1,7 @@
 .video {
-    &-preview {
+    &_preview {
         margin-top: 46px;
-        background: url('../../assets/img/video-img.jpg') center center/cover no-repeat;
+        background: url('../../../assets/img/video-img.jpg') center center/cover no-repeat;
         min-height: 32em;
         position: relative;
         border-radius: 6px;
@@ -18,7 +18,7 @@
         }
     }
 
-    &-play-button {
+    &_play_button {
         top: calc(50% - 8px);
         left: 50%;
         transform: translate(-50%, -50%);
@@ -40,7 +40,7 @@
         }
     }
 
-    &-popup {
+    &_popup {
         position: fixed;
         top: 0;
         left: 0;
@@ -52,13 +52,13 @@
         justify-content: center;
         align-items: center;
 
-        &-player {
+        &_player {
             padding: 60px 20px;
             width: 100%;
             max-width: 650px;
             position: relative;
 
-            &-close {
+            &_close {
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -80,30 +80,59 @@
             }
         }
 
-        &-player.showing {
+        &_player.showing :global {
             animation: .2s showPopup ease-in-out forwards;
         }
-
-        &-player.hiding {
+    
+        &_player.hiding :global {
             animation: .2s hidePopup ease-in-out forwards;
         }
     }
 
-    &-info {
+    &_info {
         display: flex;
         justify-content: center;
         align-items: center;
         grid-gap: 30px;
         margin: 50px 0 0 0;
 
-        &-col {
+        &_col {
             width: 50%;
         }
 
-        &-col:last-child {
+        &_col:last-child {
             line-height: 26px;
             font-weight: 400;
             color: var(--lightBlack);
         }
     }
+}
+
+@media (max-width: 991px) {
+    .video {
+        &_preview {
+            margin: 0;
+        }
+
+        &_info {
+            flex-wrap: wrap;
+            &_col {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .video {
+        &_info-col:last-child {
+            font-size: 15px;
+        }
+    }
+}
+
+
+@keyframes ripple {
+    0% { box-shadow: 0 0 0 0 rgba(0, 209, 205, 0.09), 0 0 0 10px rgba(0, 209, 205, 0.09), 0 0 0 20px rgba(0, 209, 205, 0.09); }
+    100% { box-shadow: 0 0 0 10px rgba(0, 209, 205, 0.09), 0 0 0 20px rgba(0, 209, 205, 0.09), 0 0 0 40px rgba(0, 209, 205, 0.09); }
 }

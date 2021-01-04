@@ -1,7 +1,10 @@
+$redColor: #DB162F;
+$blueColor: #006989;
+
 .advantages {
     background: var(--white);
 
-    &-wrap {
+    &_wrap {
         margin: 50px 0;
         display: flex;
         flex-wrap: wrap;
@@ -9,17 +12,17 @@
         grid-gap: 22px;
     }
 
-    &-item {
+    &_item {
         width: calc(100% / 4 - 22px);
 
         &:hover {
-            .advantages-item-rounded {
+            .advantages_item_rounded {
                 background: lighten($blueColor, 67%);
                 color: var(--blue);
             }
         }
 
-        &-rounded {
+        &_rounded {
             width: 74px;
             height: 74px;
             border-radius: 50%;
@@ -32,7 +35,7 @@
             transition: .3s ease color, .3s ease background;
         }
 
-        &-title {
+        &_title {
             margin-top: 22px;
 
             a {
@@ -47,7 +50,7 @@
             }
         }
 
-        &-text {
+        &_text {
             margin-top: 10px;
             color: var(--lightBlack);
             line-height: 26px;
@@ -55,3 +58,38 @@
         }
     }
 }
+
+@media (max-width: 991px) {
+    .advantages {
+        &_wrap {
+            grid-gap: 30px;
+            grid-column-gap: 15px;
+            margin: 25px 0;
+        }
+
+        &_item {
+            width: calc(100% / 2 - 15px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        &_wrap {
+            grid-gap: 31px;
+        }
+
+        &_item {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .advantages {
+        &_item_text {
+            font-size: 15px;
+        }
+    }
+}
+

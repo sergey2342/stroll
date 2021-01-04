@@ -1,15 +1,17 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 
+import * as styles from './Order.module.scss'
+
 
 let OrderForm = ({ handleSubmit }) => {
     return (
-        <form className="order-form" onSubmit={ handleSubmit }>
-            <div className="order-form-item">
+        <form className={styles.order_form} onSubmit={ handleSubmit }>
+            <div className={styles.order_form_item}>
                 <label>Name</label>
                 <Field component="input" name="name" type="text" placeholder="Name" required/>
             </div>
-            <div className="order-form-item">
+            <div className={styles.order_form_item}>
                 <label>Destination</label>
                 <Field component="select" name="destination" type="text" required>
                     <option>Any</option>
@@ -21,7 +23,7 @@ let OrderForm = ({ handleSubmit }) => {
                     <option value="south-america">South America</option>
                 </Field>
             </div>
-            <div className="order-form-item">
+            <div className={styles.order_form_item}>
                 <label>Activity</label>
                 <Field component="select" name="activity" type="text" required>
                     <option>Any</option>
@@ -35,7 +37,7 @@ let OrderForm = ({ handleSubmit }) => {
                     <option value="wild-adventure-tours">Wild & Adventure Tours</option>
                 </Field>
             </div>
-            <div className="order-form-item">
+            <div className={styles.order_form_item}>
                 <label>Duration</label>
                 <Field component="select" name="duration" type="text" required>
                     <option>Any</option>
@@ -45,11 +47,11 @@ let OrderForm = ({ handleSubmit }) => {
                     <option value="7">7+ Days Tour</option>
                 </Field>
             </div>
-            <div className="order-form-item">
+            <div className={styles.order_form_item}>
                 <label>Date</label>
                 <Field component="input" name="date" type="date" required />
             </div>
-            <div className="order-form-item">
+            <div className={styles.order_form_item}>
                 <label>Submit</label>
                 <button type="submit">Submit</button>
             </div>

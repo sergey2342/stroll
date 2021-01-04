@@ -1,15 +1,9 @@
 import React from 'react'
 
-import ScrollUp from './components/ScrollUp'
-import Nav from './components/Nav'
-import Main from './components/Main'
-import Advantages from './components/Advantages'
-import Tours from './components/Tours'
-import Video from './components/Video'
-import Order from './components/Order/Order'
-import Subscribe from './components/Subscribe'
-import Feedback from './components/Feedback'
-import Footer from './components/Footer'
+import ScrollUp from './components/ScrollUp/ScrollUp'
+import Nav from './components/Nav/Nav'
+import Footer from './components/Footer/Footer'
+import Content from './components/Content'
 
 
 const App = () => {
@@ -17,13 +11,7 @@ const App = () => {
         <>
             <ScrollUp />
             <Nav />
-            <Main />
-            <Advantages />
-            <Tours />
-            <Video />
-            <Order />
-            <Subscribe />
-            <Feedback />
+            <Content />
             <Footer />
         </>
     )

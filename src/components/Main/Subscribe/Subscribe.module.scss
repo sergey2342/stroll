@@ -1,5 +1,5 @@
 .subscribe {
-    background: url(../../assets/img/email-bg.jpg) center center/cover no-repeat;
+    background: url(../../../assets/img/email-bg.jpg) center center/cover no-repeat;
     background-attachment: fixed;
     position: relative;
 
@@ -13,21 +13,21 @@
         background: rgba(8, 67, 76, 0.74);
     }
 
-    &-info {
+    &_info {
         position: relative;
         padding: 46px 0 47px 0;
         max-width: 600px;
         margin-left: auto;
     }
 
-    &-descr {
+    &_descr {
         font-size: 15px;
         line-height: 26px;
         color: var(--white);
         margin-bottom: 24px;
     }
 
-    &-text {
+    &_text {
         font-size: 15px;
         line-height: 26px;
         opacity: 0.8;
@@ -35,7 +35,7 @@
         color: var(--white);
     }
 
-    &-form {
+    &_form {
         display: flex;
         flex-wrap: wrap;
 
@@ -65,6 +65,30 @@
 
             &:hover {
                 background: var(--blue);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .subscribe_info {
+        padding: 0;
+    }
+}
+
+@media (max-width: 384px) {
+    .subscribe {
+        &_form {
+            input,
+            button {
+                width: 100%;
+                border-radius: 6px;
+            }
+
+            button {
+                margin: 10px 0;
             }
         }
     }

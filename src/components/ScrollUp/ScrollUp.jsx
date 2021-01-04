@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import * as styles from './ScrollUp.module.scss'
 
 const ScrollUp = () => {
     const [showButton, setShowButton] = useState(false)
@@ -13,7 +14,7 @@ const ScrollUp = () => {
 
     return (
         <div 
-            className={`scrollup ${showButton ? 'active' : ''}`} 
+            className={`${styles.scrollup} ${showButton ? styles.active : ''}`} 
             id="scrollup"
             onClick={() => moveTop()}
         >

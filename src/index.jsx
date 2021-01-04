@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import App from './App';
 import store from './redux/store'
 
-import './sass/style.scss';
+import './index.scss'
 
 ReactDOM.render(
         <Router basename={process.env.PUBLIC_URL}>

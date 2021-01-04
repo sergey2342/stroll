@@ -1,11 +1,11 @@
 .order {
-    &-form {
+    &_form {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
         grid-row-gap: 18px;
 
-        &-item {
+        &_item {
             label {
                 display: block;
                 font-weight: 600;
@@ -29,12 +29,12 @@
             }
 
             select {
-                background: #F2F2F2 url(../../assets/img/down.png) no-repeat 95% 52%;
+                background: #F2F2F2 url(../../../assets/img/down.png) no-repeat 95% 52%;
                 -webkit-appearance: none;
             }
 
             input[type=date] {
-                background: #F2F2F2 url(../../assets/img/date.png) 95% 50% no-repeat;
+                background: #F2F2F2 url(../../../assets/img/date.png) 95% 50% no-repeat;
                 -webkit-appearance: none;
             }
 
@@ -50,6 +50,31 @@
                     background: var(--red);
                 }
             }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .order {
+        &_form {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .order {
+        &_form {
+            grid-row-gap: 33px;
+        }
+    }
+}
+
+@media (max-width: 384px) {
+    .order {
+        &_form_item button {
+            margin: 10px 0;
         }
     }
 }

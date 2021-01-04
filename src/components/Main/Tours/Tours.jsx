@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import slide1 from '../assets/img/popular-packages/1.jpg'
-import slide2 from '../assets/img/popular-packages/2.jpg'
-import slide3 from '../assets/img/popular-packages/3.jpg'
-import slide4 from '../assets/img/popular-packages/4.jpg'
-import slide5 from '../assets/img/popular-packages/5.jpg'
-import slide6 from '../assets/img/popular-packages/6.jpg'
+import slide1 from '../../../assets/img/popular-packages/1.jpg'
+import slide2 from '../../../assets/img/popular-packages/2.jpg'
+import slide3 from '../../../assets/img/popular-packages/3.jpg'
+import slide4 from '../../../assets/img/popular-packages/4.jpg'
+import slide5 from '../../../assets/img/popular-packages/5.jpg'
+import slide6 from '../../../assets/img/popular-packages/6.jpg'
+
+import * as styles from './Tours.module.scss'
 
 const toursData = [
     { id: 0, link: '#', src: slide1, city: 'Paris', info: '3Days, 4 Nights Start From', price: '750' },
@@ -20,22 +22,22 @@ const toursData = [
 
 const Tours = () => {
     return (
-        <div className="tours section">
+        <div className={`tours section ${styles.tours}`}>
             <div className="container">
                 <div className="main-info tours">
                     <div className="main-info-sub-title">Hot Tours</div>
                     <div className="main-info-title">Popular Packages</div>
                 </div>
-                <div className="tours-wrap">
+                <div className={styles.tours_wrap}>
                     {toursData && toursData.map(tour => {
                         const {id, link, src, city, info, price} = tour
                         
                         return (
-                            <Link to={link} className="tours-item" key={id}>
+                            <Link to={link} className={styles.tours_item} key={id}>
                                 <img src={src} alt="картинка"/>
-                                <div className="tours-item-info">
-                                    <h4 className="tours-item-info-city">{city}</h4>
-                                    <div className="tours-item-info-price">{info} <span>${price}</span></div>
+                                <div className={styles.tours_item_info}>
+                                    <h4 className={styles.tours_item_info_city}>{city}</h4>
+                                    <div className={styles.tours_item_info_price}>{info} <span>${price}</span></div>
                                 </div>
                             </Link>
                         )

@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Slider } from '../assets/js/slider'
+import { Slider } from '../../../assets/js/slider'
+
+import '../../../sass/modules/slider.scss';
+import * as styles from './Top.module.scss'
 
 const slidersData = [
     { id: 0, link: '#', subTitle: 'Mountain Holiday', title: { first: 'Explore your Travel', last: 'Destinations' }, text: 'Enjoy the Best Destinations with Our Travel Agency' },
@@ -10,31 +13,31 @@ const slidersData = [
     { id: 3, link: '#', subTitle: 'Mountain Holiday', title: { first: 'Explore your Travel', last: 'Destinations' }, text: 'Let"s Enjoy The Wonders of Nature' }
 ]
 
-const Main = () => {
+const Top = () => {
 
     useEffect(() => {
-        new Slider('#main-slider', {
+        new Slider('#top-slider', {
             drag: true
         })
       }, [])
 
     return (
-        <div className="main">
-            <div id="main-slider" className="slider main-slider">
+        <div className={`top ${styles.top}`}>
+            <div id="top-slider" className={`slider`}>
                 <div className="slider-list">
                     <div className="slider-track">
                         {slidersData && slidersData.map(item => {
                             const { id, link, subTitle, title, text } = item
 
                             return (
-                                <div className="slide main-slider-item" key={id}>
-                                    <div className="main-slider-item-col">
-                                        <div className="main-slider-item-sub-title">{subTitle}</div>
-                                        <h3 className="main-slider-item-title">{title.first} <span>{title.last}</span></h3>
-                                        <div className="main-slider-item-text">{text}</div>
-                                        <Link to={link} className="main-slider-item-button">Read More</Link>
+                                <div className={`slide ${styles.top_slider_item}`} key={id}>
+                                    <div className={styles.top_slider_item_col}>
+                                        <div className={styles.top_slider_item_sub_title}>{subTitle}</div>
+                                        <h3 className={styles.top_slider_item_title}>{title.first} <span>{title.last}</span></h3>
+                                        <div className={styles.top_slider_item_text}>{text}</div>
+                                        <Link to={link} className={styles.top_slider_item_button}>Read More</Link>
                                     </div>
-                                    <div className="main-slider-item-col main-slide-img"></div>
+                                    <div className={`${styles.top_slider_item_col} ${styles.top_slide_img}`}></div>
                                 </div>
                             )
                         })}
@@ -46,4 +49,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Top

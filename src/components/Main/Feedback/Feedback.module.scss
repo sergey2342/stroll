@@ -1,8 +1,8 @@
 .feedback {
-    &-slider {
+    &_slider {
         margin: 48px auto 0;
         
-        &-item {
+        &_item {
             padding: 40px 30px;
             position: relative;
             background: var(--white);
@@ -14,18 +14,18 @@
                 border-color: var(--blue);
                 background: var(--blue);
 
-                .feedback-slider-item-icon,
-                .feedback-slider-item-text,
-                .feedback-slider-item-work {
+                .feedback_slider_item_icon,
+                .feedback_slider_item_text,
+                .feedback_slider_item_work {
                     color: var(--white);
                 }
 
-                .feedback-slider-item-name {
+                .feedback_slider_item_name {
                     color: var(--yellow);
                 }
             }
 
-            &-icon {
+            &_icon {
                 position: absolute;
                 top: 25px;
                 font-size: 45px;
@@ -34,19 +34,19 @@
                 transition: .3s color;
             }
 
-            &-text {
+            &_text {
                 font-weight: 400;
                 color: var(--lightBlack);
                 transition: .3s color;
                 line-height: 26px;
             }
 
-            &-info {
+            &_info {
                 margin-top: 20px;
                 display: flex;
             }
 
-            &-img {
+            &_img {
                 border-radius: 50%;
                 overflow: hidden;
                 height: 50px;
@@ -59,18 +59,18 @@
                 }
             }
 
-            &-about {
+            &_about {
                 margin-left: 20px;
             }
 
-            &-name {
+            &_name {
                 opacity: 0.9;
                 color: var(--black);
                 font-weight: 700;
                 transition: .3s color;
             }
 
-            &-work {
+            &_work {
                 color: var(--lightBlack);
                 font-size: 15px;
                 font-weight: 400;
@@ -78,19 +78,14 @@
             }
         }
     }
-    
-    .slider-dots {
-        justify-content: flex-end;
-        margin-top: 20px;
+}
 
-        span {
-            margin: 5px;
-            border: none;
-            background: var(--dark);
-        }
 
-        span.active {
-            background: var(--red);
+
+@media (max-width: 991px) {
+    .feedback {
+        &_slider {
+            margin: 24px auto 0;
         }
     }
 }

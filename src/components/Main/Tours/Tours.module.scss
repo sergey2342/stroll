@@ -1,13 +1,13 @@
 .tours {
     background: var(--gray);
 
-    &-wrap {
+    &_wrap {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px;
     }
 
-    &-item {
+    &_item {
         margin: 0 15px 30px 15px;
         width: calc(100% / 3 - 30px);
         position: relative;
@@ -18,9 +18,9 @@
             height: 40%;
         }
 
-        &:hover &-info {
-            &-city,
-            &-price {
+        &:hover &_info {
+            &_city,
+            &_price {
                 opacity: 1;
                 transform: translateY(0);
             }
@@ -39,18 +39,17 @@
 
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            display: block;
         }
 
-        &-info {
+        &_info {
             position: absolute;
             width: 100%;
             bottom: 12px;
             padding: 0 20px;
             color: var(--white);
 
-            &-city {
+            &_city {
                 font-size: 24px;
                 line-height: 30px;
                 font-weight: 700;
@@ -59,7 +58,7 @@
                 transition: .3s transform, .4s opacity;
             }
 
-            &-price {
+            &_price {
                 margin: 5px 0;
                 line-height: 25px;
                 opacity: 0.9;
@@ -70,6 +69,35 @@
                 span {
                     color: var(--yellow);
                     font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .tours {
+        &_item {
+            width: calc(100% / 2 - 30px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .tours {
+        &_item {
+            width: 100%;
+            
+            &::before {
+                height: 40%;
+            }
+
+            &_info {
+                &_city,
+                &_price {
+                    transform: translate(0);
+                    opacity: 1;
                 }
             }
         }
