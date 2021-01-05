@@ -117,27 +117,28 @@ export class Slider {
     }
 
     currentWindowSizeF() {
-        const updateSlides = () => {
-            this.currentWindowSize = { width: window.innerWidth, height: window.innerHeight }
-            this.updateSlidesF(this.currentSettingItems)
-            this.updateSlidesOnPageF(window.innerWidth)
-            if(this.setting.arrows) {
-                this.currentArrowsF()
-            }
+        window.addEventListener("resize", this.updateSlides)
+        this.updateSlides()
+        return () => window.removeEventListener("resize", this.updateSlides)
+    }
 
-            if(this.currentSlide > (this.slides.length - this.currentSettingItems) && this.currentSlide <= this.slides.length) {
-                this.updateSlidePosF(2)
-                const w = ((this.slides.length - this.currentSettingItems) * (this.currentSlideWidth + this.setting.gap))
-                this.currentPosF(-w)
-                this.currentSlide = this.slides.length - this.currentSettingItems + 1
-            } else {
-                this.updateSlidePosF()
-                this.slideToF()
-            }
+    updateSlides = () => {
+        this.currentWindowSize = { width: window.innerWidth, height: window.innerHeight }
+        this.updateSlidesF(this.currentSettingItems)
+        this.updateSlidesOnPageF(window.innerWidth)
+        if(this.setting.arrows) {
+            this.currentArrowsF()
         }
-        window.addEventListener("resize", updateSlides)
-        updateSlides()
-        return () => window.removeEventListener("resize", updateSlides)
+
+        if(this.currentSlide > (this.slides.length - this.currentSettingItems) && this.currentSlide <= this.slides.length) {
+            this.updateSlidePosF(2)
+            const w = ((this.slides.length - this.currentSettingItems) * (this.currentSlideWidth + this.setting.gap))
+            this.currentPosF(-w)
+            this.currentSlide = this.slides.length - this.currentSettingItems + 1
+        } else {
+            this.updateSlidePosF()
+            this.slideToF()
+        }
     }
 
     updateSlidesOnPageF(w) {
@@ -360,6 +361,10 @@ export class Slider {
 
     updateSlider() {
         this.currentWindowSizeF()
+    }
+
+    clear() {
+        window.removeEventListener("resize", this.updateSlides)
     }
 
     _init() {

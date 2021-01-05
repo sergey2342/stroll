@@ -24,7 +24,7 @@ const feedbacksData = [
 const Feedback = () => {
 
     useEffect(() => {
-        new Slider('#feedback-slider', 
+        const feedbackSkider = new Slider('#feedback-slider', 
             { 
                 items: 3, 
                 gap: 20, 
@@ -44,6 +44,8 @@ const Feedback = () => {
                     }
                 ] 
             })
+
+            return () => feedbackSkider.clear()
       }, [])
 
 

@@ -8,8 +8,10 @@ import store from './redux/store'
 
 import './index.scss'
 
+// basename={process.env.PUBLIC_URL}
+
 ReactDOM.render(
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
             <Provider store={store}>
                 <App />
             </Provider>

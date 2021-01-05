@@ -122,6 +122,36 @@ $blueColor: #006989;
     margin-top: 54px;
 }
 
+.main-title {
+    font-size: 36px;
+    line-height: 46px;
+    color: var(--dark);
+    margin-bottom: 24px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+@media(max-width: 991px) {
+    .main-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media(max-width: 800px) {
+    .main-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 568px) {
+    .main-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
 :root {
     --dark:  #141414;
     --red: #DB162F;

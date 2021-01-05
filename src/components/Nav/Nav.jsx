@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 
 import { hamburgerIcon } from '../../assets/js/icons'
 
 import * as styles from './Nav.module.scss'
+
+const CustomMenuLink = ({ label, to, activeOnlyWhenExact }) => {
+    const match = useRouteMatch({ path: to, exact: activeOnlyWhenExact })
+    return <Link to={to} className={`${styles.nav_item} ${match ? styles.active : ''}`}>{label}</Link>
+}
+
 
 const Nav = () => {
     const [toggleHamburgerMenu, setToggleHamburgerMenu] = useState(false)
@@ -33,9 +39,9 @@ const Nav = () => {
                 className={`${styles.nav_item_wrap} ${animationMenu ? styles.collapsing : ''}`} 
                 area-expanded={toggleHamburgerMenu ? 'show' : 'hide'}
             >
-                <Link to="#" className={`${styles.nav_item} ${styles.active}`}>Home</Link>
-                <Link to="#" className={styles.nav_item}>About</Link>
-                <Link to="#" className={styles.nav_item}>Destinations</Link>
+                <CustomMenuLink to="/" label="Home" activeOnlyWhenExact={true} />
+                <CustomMenuLink to="/about" label="About" />
+                <CustomMenuLink to="/destinations" label="Destinations" />
                 <span className={`${styles.nav_item} ${styles.dropdown} ${toggleDropdown ? styles.show : ''}`}>
                     <span className={styles.dropdown_button} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog <i className="fal fa-angle-down"></i></span>
                     <div className={styles.dropdown_menu}>
@@ -45,7 +51,7 @@ const Nav = () => {
                     </div>
                     <div className="dropdown_bg" onClick={() => setToggleDropdown(false)}></div>
                 </span>
-                <Link to="#" className={styles.nav_item}>Contact</Link>
+                <CustomMenuLink to="/contact" label="Contact" />
             </div>
         </div>
     )

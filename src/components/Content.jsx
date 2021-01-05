@@ -1,26 +1,18 @@
-import React from 'react';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import Top from './Main/Top/Top'
-import Advantages from './Main/Advantages/Advantages'
-import Tours from './Main/Tours/Tours'
-import Video from './Main/Video/Video'
-import Order from './Main/Order/Order'
-import Subscribe from './Main/Subscribe/Subscribe'
-import Feedback from './Main/Feedback/Feedback'
-
+import Main from './Main/Main'
+import About from './About/About'
 
 const Content = () => {
     return (
         <>
-            <Top />
-            <Advantages />
-            <Tours />
-            <Video />
-            <Order />
-            <Subscribe />
-            <Feedback />
+            <Switch>
+                <Route exact path="/" component={Main} />
+                <Route path="/about" component={About} />
+            </Switch>
         </>
     );
 }
 
-export default Content;
+export default Content

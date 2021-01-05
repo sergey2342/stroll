@@ -16,9 +16,11 @@ const slidersData = [
 const Top = () => {
 
     useEffect(() => {
-        new Slider('#top-slider', {
+        const topSlider = new Slider('#top-slider', {
             drag: true
         })
+
+        return () => topSlider.clear()
       }, [])
 
     return (

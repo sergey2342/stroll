@@ -1,0 +1,133 @@
+.story {
+    position: relative;
+
+    &_wrap {
+        margin: 50px 0;
+    }
+
+    &_about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+
+        &_col {
+            width: 50%;
+        }
+
+        &_col:first-child {
+            padding-right: 15px;
+            
+            img {
+                width: 100%;
+                display: block;  
+                border-radius: 6px;  
+            }
+        }
+
+        &_descr {
+            padding: 0 15px 0 24px;
+
+            &_text {
+                line-height: 26px;
+                color: var(--lightBlack);
+                margin: 25px 0;
+                line-height: 26px;
+            }
+        }
+    }
+
+    &_feature {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+
+        &_main_title {
+            font-size: 36px;
+            line-height: 46px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        &_col {
+            &_title {
+                color: var(--blue);
+                font-size: 20px;
+                line-height: 25px;
+                font-weight: 700;
+                transition: .3s ease color;
+
+                &:hover {
+                    color: var(--red);
+                }
+            }
+
+            &_text {
+                line-height: 26px;
+                color: var(--lightBlack);
+                margin-top: 5px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .story {
+        &_wrap {
+            margin: 0;
+        }
+
+        &_about {
+            flex-direction: column;
+            margin: 0;
+
+            &_col {
+                width: 100%;
+            }
+
+            &_col:first-child {
+                padding: 0;
+            }
+
+            &_descr {
+                padding: 0;
+                margin-top: 50px;
+
+                &_title {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        &_feature {
+            margin-top: 50px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+        }
+    }
+} 
+
+@media(max-width: 800px) {
+    .story {
+        &_feature {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .story {
+        &_feature_main_title,
+        &_about_descr_title {
+            margin-bottom: 20px;
+        }
+
+        &_feature {
+            grid-gap: 20px;
+        }
+    }
+}
