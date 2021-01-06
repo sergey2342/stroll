@@ -59,6 +59,6 @@ let OrderForm = ({ handleSubmit }) => {
     )
 }
 
-OrderForm = reduxForm({ form: 'order-form' })(OrderForm)
+OrderForm = reduxForm({ form: 'order-form' })(OrderForm)    
 
 export default OrderForm

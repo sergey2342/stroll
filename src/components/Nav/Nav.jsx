@@ -28,6 +28,8 @@ const Nav = () => {
         }
     }
 
+    console.log('render Nav')
+
     return (
         <div className={styles.nav}>
             <Link to="/" className="main-logo">Str<i className="fas fa-globe-americas"></i>ll</Link>

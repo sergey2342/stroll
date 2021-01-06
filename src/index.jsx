@@ -18,3 +18,23 @@ ReactDOM.render(
         </Router>,
     document.getElementById('root')
 );
+
+
+// Конкурентный режим
+
+// ReactDOM.unstable_createRoot(document.getElementById('root'))
+//     .render(
+//     <Router basename={process.env.PUBLIC_URL}>
+//         <Provider store={store}>
+//             <App />
+//         </Provider>
+//     </Router>)
+
+
+// Блокирующий режим
+
+// ReactDOM.unstable_createBlockingRoot(document.getElementById("root")).render(<Router basename={process.env.PUBLIC_URL}>
+//     <Provider store={store}>
+//         <App />
+//     </Provider>
+// </Router>);

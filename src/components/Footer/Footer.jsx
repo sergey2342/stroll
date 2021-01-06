@@ -12,6 +12,7 @@ import slide6 from '../../assets/img/popular-packages/6.jpg'
 import * as styles from './Footer.module.scss'
 
 const Footer = () => {
+    console.log('render Footer')
     return (
         <div className={styles.footer}>
             <div className={styles.footer_top}>
