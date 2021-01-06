@@ -1,2 +1,0 @@
-(this["webpackJsonpline-app"]=this["webpackJsonpline-app"]||[]).push([[11],{263:function(n,e,t){"use strict";t.r(e);var s=t(4);t(0);e.default=function(){return console.log("render Destinations"),Object(s.jsx)(s.Fragment,{children:"d"})}}}]);
-//# sourceMappingURL=11.0b598f8d.chunk.js.map
