@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import team1 from '../../../assets/img/team-img/team1.jpg'
 import team2 from '../../../assets/img/team-img/team2.jpg'
@@ -29,7 +30,7 @@ const Team = () => {
                             return (
                                 <div className={styles.team_item} key={item.id}>
                                     <div className={styles.team_item_img}>
-                                        <img src={item.img} alt="img"/>
+                                        <LazyLoadComponent><img src={item.img} alt="img"/></LazyLoadComponent>
                                         <div className={styles.team_item_img_descr}>
                                             <div className={styles.team_item_img_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in erat interdum, euismod mauris aliquam.</div>
                                             <div className={styles.team_item_img_social}>

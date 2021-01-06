@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import { Slider } from '../../../assets/js/slider'
 
@@ -39,7 +40,9 @@ const Top = () => {
                                         <div className={styles.top_slider_item_text}>{text}</div>
                                         <Link to={link} className="main-button">Read More</Link>
                                     </div>
-                                    <div className={`${styles.top_slider_item_col} ${styles.top_slide_img}`}></div>
+                                    <LazyLoadComponent>
+                                        <div className={`${styles.top_slider_item_col} ${styles.top_slide_img}`}></div>
+                                    </LazyLoadComponent>
                                 </div>
                             )
                         })}

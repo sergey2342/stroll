@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import slide1 from '../../../assets/img/popular-packages/1.jpg'
 import slide2 from '../../../assets/img/popular-packages/2.jpg'
@@ -34,7 +35,9 @@ const Tours = () => {
                         
                         return (
                             <Link to={link} className={styles.tours_item} key={id}>
-                                <img src={src} alt="картинка"/>
+                                <LazyLoadComponent>
+                                    <img src={src} effect="blur" alt="картинка" />
+                                </LazyLoadComponent>
                                 <div className={styles.tours_item_info}>
                                     <h4 className={styles.tours_item_info_city}>{city}</h4>
                                     <div className={styles.tours_item_info_price}>{info} <span>${price}</span></div>

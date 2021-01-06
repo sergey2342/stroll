@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Main from './Main/Main'
-import About from './About/About'
+const Main = React.lazy(() => import('./Main/Main'))
+const About = React.lazy(() => import('./About/About'))
+const Destinations = React.lazy(() => import('./Destinations/Destinations'))
+
 
 const Content = () => {
     return (
         <>
             <Switch>
-                <Route exact path="/" component={Main} />
-                <Route path="/about" component={About} />
+                <Route exact path="/" component={() => <Suspense fallback={null}><Main /></Suspense>} />
+                <Route path="/about" component={() => <Suspense fallback={null}><About /></Suspense>} />
+                <Route path="/destinations" component={() => <Suspense fallback={null}><Destinations /></Suspense>} />
             </Switch>
         </>
     );

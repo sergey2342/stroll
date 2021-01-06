@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import aboutImg from '../../../assets/img/email-bg.jpg'
 
@@ -17,7 +18,7 @@ const Story = () => {
                     </div>
                     <div className={styles.story_about}>
                         <div className={styles.story_about_col}>
-                            <img src={aboutImg} alt="img"/>
+                            <LazyLoadComponent><img src={aboutImg} alt="img"/></LazyLoadComponent>
                         </div>
                         <div className={styles.story_about_col}>
                             <div className={styles.story_about_descr}>

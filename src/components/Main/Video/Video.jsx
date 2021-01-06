@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import * as styles from './Video.module.scss'
 
@@ -28,11 +29,13 @@ const Video = () => {
         <>
             <div className={`video section ${styles.video}`}>
                 <div className="container">
-                    <div className={styles.video_preview}>
-                        <div className={styles.video_play_button} onClick={() => toggleAnimationPopup(togglePopup)}>
-                            <i className="fa fa-play"></i>
+                    <LazyLoadComponent>
+                        <div className={styles.video_preview}>
+                            <div className={styles.video_play_button} onClick={() => toggleAnimationPopup(togglePopup)}>
+                                <i className="fa fa-play"></i>
+                            </div>
                         </div>
-                    </div>
+                    </LazyLoadComponent>
                     <div className={styles.video_info}>
                         <div className={`main-info video ${styles.video_info_col}`}>
                             <div className="main-info-sub-title">Short Video</div>

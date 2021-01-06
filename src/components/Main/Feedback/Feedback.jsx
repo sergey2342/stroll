@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import photo1 from '../../../assets/img/feedback-img/t1.jpg'
 import photo2 from '../../../assets/img/feedback-img/t2.jpg'
@@ -67,7 +68,11 @@ const Feedback = () => {
                                         <i className={`fa fa-quote-left ${styles.feedback_slider_item_icon}`}></i>
                                         <div className={styles.feedback_slider_item_text}>{text}</div>
                                         <div className={styles.feedback_slider_item_info}>
-                                            <div className={styles.feedback_slider_item_img}><img src={src} alt="фото"/></div>
+                                            <div className={styles.feedback_slider_item_img}>
+                                                <LazyLoadComponent>
+                                                    <img src={src} alt="фото"/>
+                                                </LazyLoadComponent>
+                                            </div>
                                             <div className={styles.feedback_slider_item_about}>
                                                 <div className={styles.feedback_slider_item_name}>{name}</div>
                                                 <div className={styles.feedback_slider_item_work}>{work}</div>

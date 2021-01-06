@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import slide1 from '../../assets/img/popular-packages/1.jpg'
 import slide2 from '../../assets/img/popular-packages/2.jpg'
@@ -44,14 +45,16 @@ const Footer = () => {
                     </div>
                     <div className={`${styles.footer_top_col} ${styles.footer_top_galery}`}>
                         <div className={styles.footer_top_menu_item_title}>INSTAGRAM GALLERY</div>
-                        <div className={styles.footer_top_galery_wrap}>
-                            <Link to="#"><img src={slide1} alt="instagram"/></Link>
-                            <Link to="#"><img src={slide2} alt="instagram"/></Link>
-                            <Link to="#"><img src={slide3} alt="instagram"/></Link>
-                            <Link to="#"><img src={slide4} alt="instagram"/></Link>
-                            <Link to="#"><img src={slide5} alt="instagram"/></Link>
-                            <Link to="#"><img src={slide6} alt="instagram"/></Link>
-                        </div>
+                        <LazyLoadComponent>
+                            <div className={styles.footer_top_galery_wrap}>
+                                <Link to="#"><img src={slide1} alt="instagram"/></Link>
+                                <Link to="#"><img src={slide2} alt="instagram"/></Link>
+                                <Link to="#"><img src={slide3} alt="instagram"/></Link>
+                                <Link to="#"><img src={slide4} alt="instagram"/></Link>
+                                <Link to="#"><img src={slide5} alt="instagram"/></Link>
+                                <Link to="#"><img src={slide6} alt="instagram"/></Link>
+                            </div>
+                        </LazyLoadComponent>
                     </div>
                 </div>
             </div>

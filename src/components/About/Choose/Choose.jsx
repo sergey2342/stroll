@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import chooseImg from '../../../assets/img/video-img.jpg'
 
@@ -13,7 +14,7 @@ const Choose = () => {
                     <div className={styles.choose_wrap_col}>
                         <div className={`main-title ${styles.choose_wrap_title}`}>Why Choose Us</div>
                         <div className={`${styles.choose_wrap_text}`}>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu ullamcorper. Nunc id ipsum fringilla, gravida felis vitae. Phasellus lacinia id, sunt in culpa quis. Phasellus lacinia</div>
-                        <img src={chooseImg} alt="img"/>
+                        <LazyLoadComponent><img src={chooseImg} alt="img"/></LazyLoadComponent>
                     </div>
                     <div className={styles.choose_wrap_col}>
                         <div className={styles.choose_wrap_advantages}>
