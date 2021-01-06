@@ -37,7 +37,7 @@ const Top = () => {
                                         <div className={styles.top_slider_item_sub_title}>{subTitle}</div>
                                         <h3 className={styles.top_slider_item_title}>{title.first} <span>{title.last}</span></h3>
                                         <div className={styles.top_slider_item_text}>{text}</div>
-                                        <Link to={link} className={styles.top_slider_item_button}>Read More</Link>
+                                        <Link to={link} className="main-button">Read More</Link>
                                     </div>
                                     <div className={`${styles.top_slider_item_col} ${styles.top_slide_img}`}></div>
                                 </div>

@@ -1,0 +1,115 @@
+.team {
+    &_wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+
+    &_item {
+
+        &:hover {
+            .team_item_img_descr {
+                bottom: 0;
+            }
+        }
+
+        &_img {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 6px;
+            }
+
+            &_descr {
+                width: 100%;
+                position: absolute;
+                bottom: -100%;
+                padding: 20px;
+                background: rgba(8, 67, 76, 0.74);
+                transition: .5s ease bottom;
+            }
+
+            &_text {
+                margin-top: 10px;
+                color: var(--white);
+                line-height: 26px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            &_social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+
+                &_around {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--white);
+                    border-radius: 50%;
+                    width: 38px;
+                    height: 38px;
+                    min-width: 38px;
+                    min-height: 38px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: all 1.3s ease;
+
+                    &:hover {
+                        background: var(--white);
+                        color: var(--dark);
+                    }
+                }
+
+                &_around:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &_descr {
+            margin-top: 10px;
+            
+            &_name {
+                display: block;
+                color: var(--dark);
+                font-weight: 700;
+                font-size: 20px;
+                text-align: center;
+                transition: .2s ease color;
+
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+
+            &_work {
+                text-align: center;
+                margin-top: 10px;
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+
+@media(max-width: 991px) {
+    .team {
+        &_wrap {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .team {
+        &_wrap {
+            grid-template-columns: 1fr;
+        }
+    }
+}

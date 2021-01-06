@@ -43,6 +43,11 @@ $blueColor: #006989;
     padding: 50px 0 54px 0;
 }
 
+.section.team,
+.section.travel {
+    padding: 100px 0;
+}
+
 .main-logo {
     color: var(--white);
     font-size: 38px;
@@ -107,6 +112,10 @@ $blueColor: #006989;
     margin: 16px 0 42px 0;
 }
 
+.main-info.travel {
+    margin-bottom: 20px;
+}
+
 .main-info.info-subscribe {
     margin-bottom: 10px;
 
@@ -136,6 +145,11 @@ $blueColor: #006989;
         font-size: 30px;
         line-height: 40px;
     }
+
+    .section.team,
+    .section.travel {
+        padding: 50px 0;
+    }
 }
 
 @media(max-width: 800px) {
@@ -149,6 +163,48 @@ $blueColor: #006989;
     .main-title {
         font-size: 26px;
         line-height: 30px;
+    }
+}
+
+.main-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    min-height: 48px;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0 1px 0;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 2;
+    -webkit-user-drag: none;
+    transition: color .5s ease;
+
+    &:hover {
+        color: var(--white);
+    }
+
+    &:hover::before {
+        transform: translate(0, 0);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--blue);
+        transform: translate(100%, 100%);
+        z-index: -1;
+        border-radius: 2px;
+        transition: transform .5s ease;
     }
 }
 

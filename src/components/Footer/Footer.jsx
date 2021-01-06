@@ -29,14 +29,14 @@ const Footer = () => {
                     <div className={`${styles.footer_top_col} ${styles.footer_top_menu}`}>
                         <div className={styles.footer_top_menu_item}>
                             <div className={styles.footer_top_menu_item_title}>QUICK LINKS</div>
-                            <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Home</span></Link>
-                            <Link to="#"><i className="fal fa-angle-double-right"></i> <span>About</span></Link>
-                            <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Destinations</span></Link>
-                            <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Contact</span></Link>
+                            <Link to="/"><i className="fal fa-angle-double-right"></i> <span>Home</span></Link>
+                            <Link to="/about"><i className="fal fa-angle-double-right"></i> <span>About</span></Link>
+                            <Link to="/destinations"><i className="fal fa-angle-double-right"></i> <span>Destinations</span></Link>
+                            <Link to="/contact"><i className="fal fa-angle-double-right"></i> <span>Contact</span></Link>
                         </div>
                         <div className={styles.footer_top_menu_item}>
                             <div className={styles.footer_top_menu_item_title}>HELP & SUPPORT</div>
-                            <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Live Chart</span></Link>
+                            <Link to="/"><i className="fal fa-angle-double-right"></i> <span>Live Chart</span></Link>
                             <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Faq</span></Link>
                             <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Support</span></Link>
                             <Link to="#"><i className="fal fa-angle-double-right"></i> <span>Terms of Services</span></Link>
@@ -60,8 +60,8 @@ const Footer = () => {
                     <div className={styles.footer_bottom_copyright}>© 2020 Stroll. All rights reserved. Design by <Link to="#"> W3Layouts</Link></div>
                     <div className={styles.footer_bottom_menu}>
                         <Link to="#">Privacy Policy</Link>
-                        <Link to="#">About Us</Link>
-                        <Link to="#">Contact Us</Link>
+                        <Link to="/about">About Us</Link>
+                        <Link to="/contact">Contact Us</Link>
                     </div>
                 </div>
             </div>
