@@ -30,6 +30,7 @@ const Feedback = () => {
                 items: 3, 
                 gap: 20, 
                 drag: true,
+                // arrows: true,
                 responsive: [
                     {
                         breakpoint: 991,
@@ -59,7 +60,7 @@ const Feedback = () => {
                 </div>
                 <div id="feedback-slider" className={`slider ${styles.feedback_slider}`}>
                     <div className="slider-list">
-                        <div className={`slider-track `}>
+                        <div className={`slider-track`}>
                             {feedbacksData && feedbacksData.map(feedback => {
                                 const { id, text, src, name, work } = feedback
 
@@ -83,6 +84,7 @@ const Feedback = () => {
                             })}
                         </div>
                     </div>
+                    <div className="slider-arrows"></div>
                     <div className="slider-dots"></div>
                 </div>
             </div>

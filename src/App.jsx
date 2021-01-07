@@ -1,4 +1,4 @@
-import React, { Suspense, SuspenseList } from 'react'
+import React, { Suspense } from 'react'
 
 // import ScrollUp from './components/ScrollUp/ScrollUp'
 // import Nav from './components/Nav/Nav'
@@ -15,12 +15,10 @@ const App = () => {
     
     return (
         <>
-            {/* <SuspenseList revealOrder="forwards"> */}
-                <Suspense fallback={null}><ScrollUp /></Suspense>
-                <Suspense fallback={null}><Nav /></Suspense>
-                <Suspense fallback={null}><Content /></Suspense>
-                <Suspense fallback={null}><Footer /></Suspense>
-            {/* </SuspenseList> */}
+            <Suspense fallback={null}><ScrollUp /></Suspense>
+            <Suspense fallback={null}><Nav /></Suspense>
+            <Suspense fallback={null}><Content /></Suspense>
+            <Suspense fallback={null}><Footer /></Suspense>
         </>
     )
 }

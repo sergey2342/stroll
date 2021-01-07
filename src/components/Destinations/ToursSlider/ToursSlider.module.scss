@@ -1,0 +1,42 @@
+.tours_slider {
+    background: #F2F2F2;
+
+    &_item {
+        position: relative;
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            border-radius: 6px;
+            -webkit-user-drag: none;
+        }
+
+        &_info {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            padding: 0 10px;
+        }
+
+        &_city {
+            font-size: 22px;
+            line-height: 30px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        &_days {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 15px;
+            line-height: 25px;
+            color: var(--white);
+            opacity: 0.9;
+
+            span {
+                font-weight: 800;
+                color: var(--yellow);
+            }
+        }
+    }
+}

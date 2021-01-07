@@ -69,10 +69,8 @@ export class Slider {
             }
 
             if(dots.children.length === 1)  dots.children[0].classList.add('disabled')
-
             this.sliderDots.replaceWith(dots)
             this.sliderDots = document.querySelector(`${this.a} .slider-dots`)
-
     }
 
     initSlides() {
@@ -333,6 +331,7 @@ export class Slider {
     }
 
     arrowsClickF(e) {
+        // setInterval(() => console.log('arrows'), 1000)
             if (e.target.tagName !== 'SPAN') return
 
             let arrows = document.querySelectorAll(`${this.a} .slider-arrow`)
@@ -365,6 +364,7 @@ export class Slider {
 
     clear() {
         window.removeEventListener("resize", this.updateSlides)
+        // this.sliderArrows.removeEventListener('click', e => this.arrowsClickF(e))
     }
 
     _init() {

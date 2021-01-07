@@ -44,7 +44,10 @@ $blueColor: #006989;
 }
 
 .section.team,
-.section.travel {
+.section.travel,
+.section.find_destinations,
+.section.tours_slider,
+.section.price {
     padding: 100px 0;
 }
 
@@ -98,6 +101,12 @@ $blueColor: #006989;
         color: var(--black);
         font-weight: 700;
     }
+
+    &-text {
+        color: var(--lightBlack);
+        line-height: 26px;
+        font-weight: 400;
+    }
 }
 
 .main-info.tours {
@@ -147,7 +156,10 @@ $blueColor: #006989;
     }
 
     .section.team,
-    .section.travel {
+    .section.travel,
+    .section.find_destinations,
+    .section.tours_slider,
+    .section.price {
         padding: 50px 0;
     }
 }
@@ -221,7 +233,8 @@ $blueColor: #006989;
 
 
 
-#feedback-slider .slider-dots {
+#feedback-slider .slider-dots,
+#tours_slider .slider-dots {
     justify-content: flex-end;
     margin-top: 20px;
 
@@ -237,7 +250,8 @@ $blueColor: #006989;
 }
 
 @media (max-width: 575px) {
-    #feedback-slider {
+    #feedback-slider,
+    #tours_slider {
         .slider-dots {
             justify-content: center;
         }
