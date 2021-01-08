@@ -47,7 +47,8 @@ $blueColor: #006989;
 .section.travel,
 .section.find_destinations,
 .section.tours_slider,
-.section.price {
+.section.price,
+.section.contact_form {
     padding: 100px 0;
 }
 
@@ -106,6 +107,7 @@ $blueColor: #006989;
         color: var(--lightBlack);
         line-height: 26px;
         font-weight: 400;
+        margin-top: 10px;
     }
 }
 
@@ -159,7 +161,8 @@ $blueColor: #006989;
     .section.travel,
     .section.find_destinations,
     .section.tours_slider,
-    .section.price {
+    .section.price,
+    .section.contact_form {
         padding: 50px 0;
     }
 }
@@ -220,6 +223,8 @@ $blueColor: #006989;
     }
 }
 
+
+
 :root {
     --dark:  #141414;
     --red: #DB162F;
@@ -229,7 +234,6 @@ $blueColor: #006989;
     --white: #ffffff;
     --gray: #F2F2F2;
 }
-
 
 
 
