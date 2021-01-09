@@ -53,7 +53,7 @@ let OrderForm = ({ handleSubmit }) => {
             </div>
             <div className={styles.order_form_item}>
                 <label>Submit</label>
-                <button type="submit">Submit</button>
+                <button type="submit" className="subscribe-button">Submit</button>
             </div>
         </form>
     )

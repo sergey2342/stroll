@@ -16,24 +16,24 @@ let ContactForm = ({ handleSubmit }) => {
                     <div className={styles.contact_form_about}>
                         <div className={styles.contact_form_about_item}>
                             <label htmlFor="contact_name">Your Name</label>
-                            <Field id="contact_name" component="input" name="name" type="text" required/>
+                            <Field id="contact_name" className="main-input" component="input" name="name" type="text" required/>
                         </div>
                         <div className={styles.contact_form_about_item}>
                             <label htmlFor="contact_email">Your Email ID</label>
-                            <Field id="contact_email" component="input" name="email" type="text" required/>
+                            <Field id="contact_email" className="main-input" component="input" name="email" type="text" required/>
                         </div>
                         <div className={styles.contact_form_about_item}>
                             <label htmlFor="contact_subject">Subject</label>
-                            <Field id="contact_subject" component="input" name="subject" type="text" required/>
+                            <Field id="contact_subject" className="main-input" component="input" name="subject" type="text" required/>
                         </div>
                     </div>
                     <div className={styles.contact_form_about}>
                         <div className={styles.contact_form_about_item}>
                             <label htmlFor="contact_message">Your Email ID</label>
-                            <Field id="contact_message" component="textarea" name="message" type="text" required/>
+                            <Field id="contact_message" className="main-input" component="textarea" name="message" type="text" required/>
                         </div>
                     </div>
-                    <button className={styles.contact_form_button} type="submit">Submit</button>
+                    <button className={`subscribe-button ${styles.contact_form_button}`} type="submit">Submit</button>
                 </form>
             </div>
         </div>

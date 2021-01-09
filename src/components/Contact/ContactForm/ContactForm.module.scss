@@ -16,17 +16,7 @@
 
             input,
             textarea {
-                width: 100%;
-                padding: 20px 15px;
-                color: var(--dark);
-                border: 1px solid #dcdada;
                 margin-top: 20px;
-                border-radius: 6px;
-                transition: .3s border-color;
-
-                &:focus {
-                    border-color: var(--blue);
-                }
             }
 
             textarea {
@@ -43,26 +33,7 @@
     }
 
     &_button {
-        width: 220px;
-        padding: 3px 20px;
-        height: 62px;
-        color: var(--white);
-        background: var(--blue);
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 6px;
         margin: 25px 0 0 auto;
-        position: relative;
-        border: 0;
-        font-size: 16px;
-        cursor: pointer;
-        transition: .2s ease background;
-
-        &:hover {
-            background: var(--red);
-        }
     }
 }
 

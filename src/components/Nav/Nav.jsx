@@ -48,7 +48,7 @@ const Nav = () => {
                     <span className={styles.dropdown_button} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog <i className="fal fa-angle-down"></i></span>
                     <div className={styles.dropdown_menu}>
                         <Link to="#" className={styles.dropdown_item}>Blog</Link>
-                        <Link to="#" className={styles.dropdown_item}>Blog Single</Link>
+                        <Link to="/blog" className={styles.dropdown_item}>Blog Single</Link>
                         <Link to="#" className={styles.dropdown_item}>Landing Page</Link>
                     </div>
                     <div className="dropdown_bg" onClick={() => setToggleDropdown(false)}></div>

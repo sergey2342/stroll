@@ -5,6 +5,7 @@ const Main = React.lazy(() => import('./Main/Main'))
 const About = React.lazy(() => import('./About/About'))
 const Destinations = React.lazy(() => import('./Destinations/Destinations'))
 const Contact = React.lazy(() => import('./Contact/Contact'))
+const Blog = React.lazy(() => import('./Blog/Blog'))
 
 
 const Content = () => {
@@ -15,6 +16,7 @@ const Content = () => {
                 <Route exact path="/about" component={() => <Suspense fallback={null}><About /></Suspense>} />
                 <Route exact path="/destinations" component={() => <Suspense fallback={null}><Destinations /></Suspense>} />
                 <Route exact path="/contact" component={() => <Suspense fallback={null}><Contact /></Suspense>} />
+                <Route exact path="/blog" component={() => <Suspense fallback={null}><Blog /></Suspense>} />
                 <Route path="*" component={() => <Suspense fallback={null}><div>404 Not Found</div></Suspense>} />
             </Switch>
         </>
