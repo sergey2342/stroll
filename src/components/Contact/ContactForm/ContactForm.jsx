@@ -29,7 +29,7 @@ let ContactForm = ({ handleSubmit }) => {
                     </div>
                     <div className={styles.contact_form_about}>
                         <div className={styles.contact_form_about_item}>
-                            <label htmlFor="contact_message">Your Email ID</label>
+                            <label htmlFor="contact_message">Message</label>
                             <Field id="contact_message" className="main-input" component="textarea" name="message" type="text" required/>
                         </div>
                     </div>

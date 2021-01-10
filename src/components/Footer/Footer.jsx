@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <div className={styles.footer_bottom}>
                 <div className={`container ${styles.container}`}>
-                    <div className={styles.footer_bottom_copyright}>© 2020 Stroll. All rights reserved. Design by <Link to="#"> W3Layouts</Link></div>
+                    <div className={styles.footer_bottom_copyright}>© 2020 Stroll. All rights reserved</div>
                     <div className={styles.footer_bottom_menu}>
                         <Link to="#">Privacy Policy</Link>
                         <Link to="/about">About Us</Link>

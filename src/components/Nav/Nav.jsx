@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useRouteMatch } from 'react-router-dom'
+import { Link, useRouteMatch, useLocation } from 'react-router-dom'
 
 import { hamburgerIcon } from '../../assets/js/icons'
 
@@ -11,10 +11,11 @@ const CustomMenuLink = ({ label, to, activeOnlyWhenExact }) => {
 }
 
 
-const Nav = () => {
+const Nav = React.memo(() => {
     const [toggleHamburgerMenu, setToggleHamburgerMenu] = useState(false)
     const [animationMenu, setAnimationMenu] = useState(false)
     const [toggleDropdown, setToggleDropdown] = useState(false)
+    const history = useLocation()
 
     const toggleHamburger = (state) => {
         if(!state) {
@@ -27,6 +28,8 @@ const Nav = () => {
             setTimeout(() => setAnimationMenu(false), 290)
         }
     }
+
+    const isActiveBlog = history.pathname === '/blog' ? styles.active : ''
 
     console.log('render Nav')
 
@@ -45,18 +48,18 @@ const Nav = () => {
                 <CustomMenuLink to="/about" label="About" />
                 <CustomMenuLink to="/destinations" label="Destinations" />
                 <span className={`${styles.nav_item} ${styles.dropdown} ${toggleDropdown ? styles.show : ''}`}>
-                    <span className={styles.dropdown_button} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog <i className="fal fa-angle-down"></i></span>
+                    <span className={`${styles.dropdown_button} ${isActiveBlog}`} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog <i className="fal fa-angle-down"></i></span>
                     <div className={styles.dropdown_menu}>
-                        <Link to="#" className={styles.dropdown_item}>Blog</Link>
-                        <Link to="/blog" className={styles.dropdown_item}>Blog Single</Link>
-                        <Link to="#" className={styles.dropdown_item}>Landing Page</Link>
+                        <Link to="/blog" className={styles.dropdown_item} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog</Link>
+                        <Link to="/blog/1610265635917" className={styles.dropdown_item} onClick={() => setToggleDropdown(!toggleDropdown)}>Blog Single</Link>
+                        <Link to="/" className={styles.dropdown_item} onClick={() => setToggleDropdown(!toggleDropdown)}>Landing Page</Link>
                     </div>
-                    <div className="dropdown_bg" onClick={() => setToggleDropdown(false)}></div>
+                    <div className={styles.dropdown_bg} onClick={() => setToggleDropdown(false)}></div>
                 </span>
                 <CustomMenuLink to="/contact" label="Contact" />
             </div>
         </div>
     )
-}
+})
 
 export default Nav
