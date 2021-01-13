@@ -25,7 +25,6 @@ const postsArr = [
     { id: '65edt4540235917', src: img2, date: 'January 24, 2020', file: 'Travel, World', title: 'Explore your Travel Destinations', ago: '3 mins ago' }
 ]
 
-
 const Blog = () => {
     const history = useLocation()
     const isBlogMain = history.pathname === '/blog'
